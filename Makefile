@@ -3,21 +3,21 @@
 # Author:     chadd williams
 # Date:       Sept 1, 2021
 # Class:      CS360
-# Assignment: GitHub Classroom & VSCode Example
-# Purpose:    Demonstrate how to use GitHub Classroom & VSCode
+# Assignment: Lab HTTP
+# Purpose:    Build a TCP Client
 #############################################################################
 
-all: bin bin/simpleCProgram
+all: bin bin/httpget
 
 bin:
 	mkdir -p bin
 
-bin/simpleCProgram: bin/simpleCProgram.o
-	gcc -o bin/simpleCProgram -g -Wall bin/simpleCProgram.o
+bin/httpget: bin/httpget.o
+	gcc -o bin/httpget -g -Wall bin/httpget.o
 
-bin/simpleCProgram.o: bin src/simpleCProgram.c
-	gcc -c -o bin/simpleCProgram.o -g -Wall src/simpleCProgram.c
+bin/httpget.o: bin src/httpget.c
+	gcc -c -o bin/httpget.o -g -Wall src/httpget.c
 
 
 clean:
-	rm -f bin/simpleCProgram bin/*.o
+	rm -f bin/httpget bin/*.o
