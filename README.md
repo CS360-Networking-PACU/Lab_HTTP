@@ -34,41 +34,52 @@ Start early!
 
 Based on the packet captured above, you must build an HTTP request message to send to the server.  The only required fields are the first line (GET) and HOST:   Add a Connection: close line to close the TCP connection after the response is provided.  Each line in the HTTP request message ends in \r\n and the entire HTTP request message is ended with another \r\n.
 
-    1. In your captured HTTP Request, what is the source port?
+```
+1. In your captured HTTP Request, what is the source port?
 
-    2. What is the content of the Connection: field in your captured HTTP request?  
-       What does this mean?
+2. What is the content of the Connection: field in your captured HTTP request?  
+   What does this mean?
        
-    3. Study the HTTP request.  What information does the server know about your computer? 
+3. Study the HTTP request.  What information does the server know about your computer? 
 
-    4. What HTTP code did you receive back from the server?
+4. What HTTP code did you receive back from the server?
 
-    5. Study the HTTP response.  What information does your browser know about the server?
-
+5. Study the HTTP response.  What information does your browser know about the server?
+```
 * Reload the page in the web browser and capture the new HTTP request and HTTP response.  Take a screenshot of each Hypertext Transfer Protocol message and paste them into your document.  Be sure to clearly label each image.  
 
-    6. How did the HTTP request change (what additional fields were provided)? What does each of these fields mean?  Where did the values in these fields originate?
+```
+6. How did the HTTP request change (what additional fields were provided)? 
+   What does each of these fields mean?  
+   Where did the values in these fields originate?
 
-    7. What HTTP code did you receive back from the server?
+7. What HTTP code did you receive back from the server?
 
-    8. What causes the HTTP server to respond with this code?
+8. What causes the HTTP server to respond with this code?
+```
 
 * Use your httpget command to fetch the web page.  Be sure to use Wireshark to capture the HTTP request and HTTP response.  Take a screenshot of each Hypertext Transfer Protocol message and paste them into your document.  Be sure to clearly label each image.  Take a screenshot of the execution of your program and paste that into your document.  Be sure to run your program in a terminal with black text on a white background.
 
-    9. How many bytes were on the wire for your HTTP request?
-    10. Does the ETag in this HTTP response match the ETag in the previous HTTP responses? Why or why not?
+```
+9.  How many bytes were on the wire for your HTTP request?
+
+10. Does the ETag in this HTTP response match the ETag in the previous HTTP responses? 
+    Why or why not?
+```
 * Restart the Wireshark capture.
 
 * Load the following page into Firefox:
 
-	http://pubs.opengroup.org/onlinepubs/009696699/basedefs/sys/socket.h.html
+ * http://pubs.opengroup.org/onlinepubs/009696699/basedefs/sys/socket.h.html
+```
+11. How many HTTP requests are made to completely load this page?
 
-    11. How many HTTP requests are made to completely load this page?
+12. Are any concurrent connections opened to the server to fetch objects in parallel?  
+    If so, take a screenshot of the relevant portion of Wireshark and describe how 
+    you recognized concurrent connections.
 
-    12. Are any concurrent connections opened to the server to fetch objects in parallel?  If so, take a screenshot of the relevant portion of Wireshark and describe how you recognized concurrent connections.
-
-    13. What types of data besides text/html are returned in individual HTTP responses?
-
+13. What types of data besides text/html are returned in individual HTTP responses?
+```
 ### TCP Socket Programming with C
 
 Your program will need to use the following C functions.  See the class notes on how to use each of these functions.
